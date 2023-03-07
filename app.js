@@ -1,25 +1,11 @@
+const loginForm = document.querySelector("#login-form")
+const loginInput=document.querySelector("#login-form input");
 
 
-const calculator={
-    add: function(a,b){
-        console.log(a+b);
-    },
-
-    min: function(a,b){
-        console.log(a-b);
-    },
-
-    div: function(a,b){
-        console.log(a/b);
-    },
-
-    pow: function(a,b){
-        console.log(a**b);
-    }
+function onLoginSubmit(event){
+    event.preventDefault(); //자동 저장을 막아주는 라인
+    console.dir(event);
 }
 
 
-calculator.add(10,5);
-calculator.min(10,5);
-calculator.div(100,2);
-calculator.pow(5,2);
+loginForm.addEventListener("submit",onLoginSubmit)
