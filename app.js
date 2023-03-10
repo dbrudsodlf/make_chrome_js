@@ -3,15 +3,27 @@ const loginInput=document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting")
 
 const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username"
 
 function onLoginSubmit(event){
     event.preventDefault(); //자동 저장을 막아주는 라인
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value;
+    const username = loginInput.ariaValueMax;
+    localStorage.setItem(USERNAME_KEY,username)
     //greeting.innerText = "Hello " + username;
-    greeting.innerText = `Hello ${username}`; //'' ""아니고 백틱임 ``
+    paintGreetings(username);
+}
+
+function paintGreetings(username){
+    greeting.innerText=`Hello ${username}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-loginForm.addEventListener("submit", onLoginSubmit)
+if(savedUsername == null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+}else{
+    paintGreetings(savedUsername);
+}
