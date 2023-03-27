@@ -33,3 +33,35 @@ img{
     font-size: 50px;
     padding:10px;
 }
+
+#login-form input::placeholder{
+    color: #fff;
+}
+
+#greeting{
+    color: #fff;
+    font-size: 50px;
+}
+
+#todo-form input{
+    width: 500px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    background: transparent;
+    font-size: 30px;
+    padding:10px;
+}
+
+#todo-form input::placeholder{
+    color: #fff;
+}
+
+#quote span{
+    color: #fff;
+}
+
+#weather span{
+    color: #fff;
+}
