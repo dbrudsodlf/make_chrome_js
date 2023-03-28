@@ -18,10 +18,30 @@ img{
     z-index: -1;
     opacity:80%;
     }
+.centerpart{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainpart{
+    display: flex; 
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherpart{
+    position:absolute;
+    right: 50px;
+    top:30px;
+}
 
 #clock{
     color:#fff;
-    font-size: 100px;
+    font-size: 150px;
 }
 
 #login-form input{
@@ -31,14 +51,19 @@ img{
     outline: none;
     background: transparent;
     font-size: 50px;
-    padding:10px;
+    padding:60px 0 10px 0;
+    text-align: center;
+    color: #fff;
 }
 
 #login-form input::placeholder{
     color: #fff;
+    text-align: center;
 }
 
 #greeting{
+    margin-bottom: 30px;
+    padding:60px 0 10px 0;
     color: #fff;
     font-size: 50px;
 }
@@ -52,10 +77,38 @@ img{
     background: transparent;
     font-size: 30px;
     padding:10px;
+    color: #fff;
+    text-align: center;
 }
 
 #todo-form input::placeholder{
     color: #fff;
+    text-align: center;
+}
+
+#todo-list li{
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#todo-list li button{
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+#todo-list li button:hover{
+    opacity: 0.4;
+}
+
+#quote{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
 }
 
 #quote span{
